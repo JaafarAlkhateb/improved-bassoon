@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>مطبوعات الرياض</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0; padding: 0;
+      direction: rtl;
+      color: #222;
+    }
+    header {
+      background-color: #2e86de;
+      color: white;
+      padding: 20px 0 10px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header h1 {
+      margin: 0 0 10px 0;
+      font-size: 2.5em;
+      border-bottom: 3px solid white;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    header img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      opacity: 0.5;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+      border-radius: 0 0 10px 10px;
+    }
+    header > * {
+      position: relative;
+      z-index: 1;
+    }
+    section.services {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .service-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .service-img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
+    .service-content {
+      flex: 1;
+    }
+    .service-content h2 {
+      margin: 0 0 10px;
+      font-size: 1.8em;
+      color: #2e86de;
+    }
+    .service-content p {
+      font-size: 1.1em;
+      line-height: 1.5;
+    }
+    /* زر عرض التفاصيل */
+    .btn-toggle {
+      background-color: #2e86de;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 18px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.25s ease;
+      margin-top: 10px;
+    }
+    .btn-toggle:hover {
+      background-color: #1b4f72;
+    }
+    .details {
+      margin-top: 15px;
+      padding-left: 15px;
+      border-left: 3px solid #2e86de;
+      display: none;
+    }
+    /* قسم الصورة مع النص المزخرف */
+    section.highlight-section {
+      position: relative;
+      width: 100%;
+      max-height: 400px;
+      overflow: hidden;
+      margin: 40px 0;
+      text-align: center;
+    }
+    section.highlight-section img {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+      opacity: 0.6;
+    }
+    section.highlight-section h2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #2e86de;
+      font-size: 2.4em;
+      font-family: 'Segoe Script', cursive, 'Arial';
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+      text-align: center;
+      line-height: 1.2;
+      white-space: normal;
+      width: 80%;
+    }
+    /* صورة تحت النص */
+    .under-image-container {
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .under-image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    /* أيقونة واتساب */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      left: 25px;
+      width: 60px;
+      height: 60px;
+      background-color: #25d366;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 32px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+      cursor: pointer;
+      z-index: 9999;
+      text-decoration: none;
+    }
+    .whatsapp-float:hover {
+      background-color: #128c4a;
+    }
+    /* أيقونة إنستغرام */
+    .instagram-float {
+      position: fixed;
+      bottom: 95px;
+      left: 25px;
+      width: 60px;
+      height: 60px;
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 32px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+      cursor: pointer;
+      text-decoration: none;
+      z-index: 9999;
+    }
+    .instagram-float:hover {
+      filter: brightness(0.85);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>مطبوعات الرياض</h1>
+  <p>جودة عالية في التصميم والطباعة لجميع المطبوعات</p>
+  <img 
+    src="https://i.ibb.co/JRGjrw5B/OS5-KHU12.png" 
+    alt="مطبوعات الرياض" 
+  />
+</header>
+
+<section class="services">
+
+  <div class="service-card">
+    <img class="service-img" src="https://i.ibb.co/7tGmFdVY/GARMORE-Coffee.jpg" alt="طباعة الأكواب" />
+    <div class="service-content">
+      <h2>طباعة الأكواب</h2>
+      <button class="btn-toggle" onclick="toggleDetails('cups')">عرض التفاصيل</button>
+      <div class="details" id="cups">
+        <p>نقدم طباعة مخصصة على الأكواب بأعلى جودة وألوان ثابتة تدوم طويلاً.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- باقي الخدمات (مقتطف) -->
+  <!-- كرر بقية الخدمات بنفس النمط -->
+
+</section>
+
+<section class="highlight-section">
+  <img src="https://i.ibb.co/PGTQtFzR/IMG-20250605-063050-337.webp" alt="خدمات الطباعة" />
+  <h2>وكافة خدمات<br />الطباعة</h2>
+</section>
+
+<section class="under-image-container">
+  <img src="https://i.ibb.co/cK1wdX58/IMG.png" alt="صورة إضافية" />
+</section>
+
+<!-- أيقونة واتساب عائمة -->
+<a href="https://wa.me/966559667519" target="_blank" class="whatsapp-float" aria-label="تواصل معنا عبر واتساب">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="32px" height="32px">
+    <path d="M20.52 3.48A11.94 11.94 0 0 0 12.002 1a11.98 11.98 0 0 0-10.615 17.7L1 23l4.47-1.176A11.95 11.95 0 0 0 23 12.002a11.94 11.94 0 0 0-2.48-8.52zm-8.52 16a8.466 8.466 0 0 1-4.35-1.234l-.31-.183-2.654.698.71-2.59-.203-.33a8.442 8.442 0 1 1 6.803 3.65z"/>
+    <path d="M16.23 13.53c-.23-.11-1.35-.67-1.56-.75-.21-.08-.36-.11-.51.11-.15.23-.6.75-.74.9-.14.15-.28.17-.52.06-.24-.11-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.015-.37.105-.49.11-.11.24-.28.36-.42.12-.14.16-.23.24-.39.08-.15.04-.28-.02-.39-.06-.11-.51-1.23-.7-1.69-.18-.44-.37-.38-.51-.39-.13-.01-.28-.01-.43-.01-.15 0-.39.06-.6.28-.22.23-.84.82-.84 2 .001 1.18.86 2.32.98 2.48.12.15 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.1.15 1.52.09.46-.07 1.35-.55 1.54-1.08.2-.53.2-.98.14-1.08-.05-.11-.21-.17-.44-.28z"/>
+  </svg>
+</a>
+
+<!-- أيقونة إنستغرام عائمة -->
+<a href="https://www.instagram.com/ryadhprints?igsh=MWlxMDJsazE1eXRsMg==" target="_blank" class="instagram-float" aria-label="تواصل معنا عبر إنستغرام">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="32px" height="32px">
+    <path d="M7.75 2h8.5C19.216 2 21 3.784 21 6.25v8.5c0 2.466-1.784 4.25-4.25 4.25h-8.5C4.784 19 3 17.216 3 14.75v-8.5C3 3.784 4.784 2 7.75 2zm.5 2a3.75 3.75 0 1 0 7.5 0 3.75 3.75 0 0 0-7.5 0zm3.75 1a2.25 2.25 0 1 1 0 4.5 2.25 2.25 0 0 1 0-4.5zm3.75 7.25a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+  </svg>
+</a>
+
+<script>
+  function toggleDetails(id) {
+    const el = document.getElementById(id);
+    if (el.style.display === 'block') {
+      el.style.display = 'none';
+    } else {
+      el.style.display = 'block';
+    }
+  }
+</script>
+
+</body>
+</html>
